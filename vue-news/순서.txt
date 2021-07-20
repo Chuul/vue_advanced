@@ -1,0 +1,27 @@
+#섹션5. 라우터 기본#
+
+1. 라우터 설치 및 라우터 구현
+
+2. router-view를 이용한 라우팅 컴포넌트 표시
+
+3. redirect속성과 router-link
+    1) redirect 만들기 -> /news가 먼저 나오도록
+    2) router-link 만들기 -> components에 vue 컴포넌트 추가해서
+
+4. ToolBar의 라우터 링크 스타일링
+    1) Style값 복붙
+
+5. [실습안내] 
+    1) ItemView랑 UserView 라우터에 등록하기
+
+6. 라우터 폴더 작명 팁과 라우터 mode 안내
+    1) url에서 # 제거하기
+
+#섹션6. API 구현#
+
+1. axios를 이용한 api 호출
+    1) axios를 이용해 NewsView에서 데이터 받아오기
+2. 실습안내
+    1) NewsView에 구현한 axios코드를 api 폴더를 따로 만들어서 그쪽에 넣어놓기 = 즉, 한 곳에서 API를 관리하도록 정리
+3. 실습
+    1) JobsView랑 AskView도 구현

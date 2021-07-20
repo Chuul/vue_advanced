@@ -8,7 +8,9 @@ import UserView from '../views/UserView.vue'
 
 Vue.use(VueRouter);
 
+// 라우터와 관련된 정보들을 정리하는 객체
 export const router = new VueRouter({
+    // mode : 'history' -> url주소에 '#' 없애기
     mode : 'history',
     routes : [
         {
