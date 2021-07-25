@@ -17,9 +17,19 @@ function fetchAskList() {
     return axios.get(`${config.baseUrl}ask/1.json`);
 }
 
+function fetchUserInfo(name) {
+    return axios.get(`${config.baseUrl}user/${name}.json`);    
+}
+
+function fetchItemInfo(itemname) {
+    return axios.get(`${config.baseUrl}item/${itemname}.json`);    
+}
+
 // 3. 정의한 API들 꺼내기 -> 다른 곳에서 쓸 수 있도록!
 export {
     fetchNewsList,
     fetchJobsList,
-    fetchAskList
+    fetchAskList,
+    fetchUserInfo,
+    fetchItemInfo
 }
