@@ -13,6 +13,7 @@ export default {
     ListItem
   },
   mixins : [ListMixin]
+  // mounted : 인스턴스가 화면에 불러와서 나타냈을 때 완료된 시점에 불러주는 라이프사이클 훅
 }
 </script>
 
