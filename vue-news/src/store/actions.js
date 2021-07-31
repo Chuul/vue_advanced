@@ -1,31 +1,39 @@
-import { fetchNewsList, fetchJobsList, fetchAskList, fetchUserInfo, fetchItemInfo } from '../api/index.js'
+import { 
+    // fetchNewsList, 
+    // fetchJobsList, 
+    // fetchAskList, 
+    fetchList,
+    fetchUserInfo, 
+    fetchItemInfo,
+} from '../api/index.js'
 
 export default {
-    FETCH_NEWS({commit}){
-            fetchNewsList()
-                .then(({data}) => {
-                    commit('SET_NEWS', data) 
-                })
-                .catch(function(error) {
-                    console.log(error);
-            })
-        },
-        FETCH_JOBS(context){
-            fetchJobsList()
-                .then(response => {
-                    context.commit('SET_JOBS', response.data)
-                })
-                .catch(error => console.log(error));
-        },
-        FETCH_ASK({commit}){
-            fetchAskList()
-                .then(({data}) => {
-                    commit('SET_ASK', data) 
-                })
-                .catch( error => {
-                    console.log(error);
-                })
-        },
+        // FETCH_NEWS(context){
+        //     fetchNewsList()
+        //         .then( response => {
+        //             context.commit('SET_NEWS', response.data);
+        //             return response;
+        //         })
+        //         .catch(function(error) {
+        //             console.log(error);
+        //     })
+        // },
+        // FETCH_JOBS(context){
+        //     fetchJobsList()
+        //         .then(response => {
+        //             context.commit('SET_JOBS', response.data)
+        //         })
+        //         .catch(error => console.log(error));
+        // },
+        // FETCH_ASK({commit}){
+        //     fetchAskList()
+        //         .then(({data}) => {
+        //             commit('SET_ASK', data) 
+        //         })
+        //         .catch( error => {
+        //             console.log(error);
+        //         })
+        // },
         FETCH_USER({commit}, name){
             fetchUserInfo(name)
                 .then( ({data}) => {
@@ -43,5 +51,10 @@ export default {
                 .catch( error => {
                     console.log(error);
                 })
+        },
+        FETCH_LIST( {commit}, pageName) {
+            fetchList(pageName)
+                .then( ({data}) => commit('SET_LIST', data))
+                .catch( error => console.log(error))
         }
     }
